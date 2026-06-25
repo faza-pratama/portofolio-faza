@@ -1,10 +1,12 @@
 "use client";
 
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const ref = useScrollReveal<HTMLDivElement>();
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden" id="home">
 
       {/* Background glow */}
       <div className="absolute inset-0 -z-10">
